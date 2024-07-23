@@ -1,7 +1,7 @@
 # JornadaMilhas
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
-![alt text](assets/imagens/image.png)
+![alt text](src/assets/imagens/image.png)
 
 ## Development server
 
