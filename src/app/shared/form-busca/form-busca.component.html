@@ -8,7 +8,7 @@
                     IDA E VOLTA</mat-button-toggle>
                 <mat-button-toggle>SOMENTE IDA</mat-button-toggle>
             </mat-button-toggle-group>
-            <mat-chip-listbox aria-label="Selection flights">
+            <mat-chip-listbox (click)="openDialog()" aria-label="Selection flights">
                 <mat-chip-option selected>One Adult</mat-chip-option>
                 <mat-chip-option>Econômico</mat-chip-option>
             </mat-chip-listbox>
@@ -54,6 +54,7 @@
             </mat-form-field>
             <!-- <p>Selected range: {{range.value | json}}</p> -->
             <button mat-flat-button color="primary">Buscar</button>
+
         </div>
     </form>
 </app-card>

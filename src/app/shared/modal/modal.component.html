@@ -1,0 +1,49 @@
+
+<section class="modal">
+    <h2 mat-dialog-title>Viajante</h2>
+    <mat-dialog-content>
+        <div class="selecao-idade">
+            <ul>
+                <li>Adultos</li>
+                <li>(Acima de 12 anos)</li>
+                <li>
+                    <button class="decremento" mat-mini-fab> <mat-icon>remove</mat-icon></button>
+                    <span>1</span>
+                    <button class="incremento" mat-mini-fab> <mat-icon>add_circle</mat-icon></button>
+                </li>
+            </ul>
+            <ul>
+                <li>Crianças</li>
+                <li>(Entre 2 e 11 anos)</li>
+                <li>
+                    <button class="decremento" mat-mini-fab> <mat-icon>remove</mat-icon></button>
+                    <span>1</span>
+                    <button class="incremento" mat-mini-fab> <mat-icon>add_circle</mat-icon></button>
+                </li>
+            </ul>
+            <ul>
+                <li>Bebês</li>
+                <li>(Até 2 anos)</li>
+                <li>
+                    <button class="decremento" mat-mini-fab> <mat-icon>remove</mat-icon></button>
+                    <span>1</span>
+                    <button class="incremento" mat-mini-fab> <mat-icon>add_circle</mat-icon></button>
+                </li>
+            </ul>
+        </div>
+        <div class="selecao-categoria">
+            <ul>
+                <li>Categoria</li>
+                <li>
+                    <mat-chip-listbox aria-label="Selection category">
+                        <mat-chip-option>Executiva</mat-chip-option>
+                        <mat-chip-option selected>Econômica</mat-chip-option>
+                    </mat-chip-listbox>
+                </li>
+            </ul>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions class="modal-actions">
+        <button mat-flat-button color="primary" mat-dialog-close>Buscar</button>
+    </mat-dialog-actions>
+</section>
