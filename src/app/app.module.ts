@@ -28,49 +28,42 @@ import { ModalComponent } from './shared/modal/modal.component';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { CardDashboardComponent } from './shared/card-dashboard/card-dashboard.component';
 import {MatSelectModule} from '@angular/material/select';
 import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    BannerComponent,
-    CardComponent,
-    ContainerComponent,
-    HomeComponent,
-    CardBuscaComponent,
-    CardDepoimentoComponent,
-    FormBuscaComponent,
-    ModalComponent,
-    SidenavComponent,
-    CardDashboardComponent,
-    PromocoesComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatCardModule,
-    MatButtonToggleModule,
-    MatIconModule,
-    MatChipsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatDialogModule,
-    MatSidenavModule,
-    MatListModule,
-    HttpClientModule,
-    MatSelectModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        BannerComponent,
+        CardComponent,
+        ContainerComponent,
+        HomeComponent,
+        CardBuscaComponent,
+        CardDepoimentoComponent,
+        FormBuscaComponent,
+        ModalComponent,
+        SidenavComponent,
+        CardDashboardComponent,
+        PromocoesComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatCardModule,
+        MatButtonToggleModule,
+        MatIconModule,
+        MatChipsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatDialogModule,
+        MatSidenavModule,
+        MatListModule,
+        MatSelectModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
