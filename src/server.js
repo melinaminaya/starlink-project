@@ -59,11 +59,12 @@ app.get('/api/enterprise/v1/accounts', async (req, res) => {
         res.status(error.response ? error.response.status : 500).json(error.response ? error.response.data : { message: 'Server error' });
     }
 });
-app.get('/api/enterprise/v1/account/accountnumber/service-lines/available-products', async (req, res) => {
+app.get('/api/enterprise/v1/account/:accountNumber/service-lines/available-products', async (req, res) => {
     const token = req.headers['authorization'];
+    const { accountNumber } = req.params;
 
     try {
-      const response = await axios.get('https://web-api.starlink.com/enterprise/v1/account/ACC-3456480-85383-22/service-lines/available-products', {
+      const response = await axios.get(`https://web-api.starlink.com/enterprise/v1/account/${accountNumber}/service-lines/available-products`, {
         headers: {
           'Authorization': token, // Ensure 'Authorization' is correct
           'Content-Type': 'application/json'

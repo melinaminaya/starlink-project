@@ -48,7 +48,7 @@ import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
     ModalComponent,
     SidenavComponent,
     CardDashboardComponent,
-    PromocoesComponent
+    PromocoesComponent,
   ],
   imports: [
     BrowserModule,

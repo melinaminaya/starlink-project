@@ -1,17 +1,31 @@
-<mat-card appearance="outlined">
-    <mat-card-title> Seleção de Antenas </mat-card-title>
-    <mat-card-content>
-        <mat-form-field>
-            <mat-label>Selecione uma opção</mat-label>
-            <mat-select [(value)]="selected">
-              <mat-option>None</mat-option>
-              <mat-option *ngFor="let product of availableProducts" [value]="product.productReferenceId">
-                {{ product.name }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          
-          <p>Antena selecionada: {{selected}}</p>
-          
-    </mat-card-content>
-  </mat-card>
+<mat-card appearance="outlined" class="card-container">
+  <mat-card-title class="card-title"> Seleção de Contas e Antenas
+  </mat-card-title>
+  <mat-card-content class="card-content">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Selecione uma conta</mat-label>
+      <mat-select [(value)]="selectedAccount"
+        (selectionChange)="onAccountChange()">
+        <mat-option *ngFor="let account of accounts" [value]="account">
+          {{ account.accountName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" *ngIf=" !errorMessage" class="form-field">
+      <mat-label>Selecione uma antena</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let product of availableProducts"
+          [value]="product.productReferenceId">
+          {{ product.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <p *ngIf=" !errorMessage" class="selection-info">Antena selecionada:
+      {{selected}}</p>
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+  </mat-card-content>
+
+</mat-card>
