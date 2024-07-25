@@ -1,0 +1,17 @@
+<mat-card appearance="outlined">
+    <mat-card-title> Seleção de Antenas </mat-card-title>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-label>Selecione uma opção</mat-label>
+            <mat-select [(value)]="selected">
+              <mat-option>None</mat-option>
+              <mat-option *ngFor="let product of availableProducts" [value]="product.productReferenceId">
+                {{ product.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+          <p>Antena selecionada: {{selected}}</p>
+          
+    </mat-card-content>
+  </mat-card>

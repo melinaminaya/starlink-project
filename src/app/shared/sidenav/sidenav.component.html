@@ -1,0 +1,33 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened class="sidenav">
+      <mat-nav-list>
+        <mat-list-item>
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>info</mat-icon>
+          <span>About</span>
+        </mat-list-item>
+        <!-- Add more menu items here -->
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <header class="app-header">
+        <mat-toolbar color="secondary">
+          <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <img class="img-logo" src="assets/imagens/logo_sat_app.png" alt="Logo app">
+          <span class="example-spacer"></span>
+        </mat-toolbar>
+      </header>
+      
+      <!-- Main content goes here -->
+      <div class="main-content">
+        <ng-content></ng-content>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

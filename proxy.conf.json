@@ -1,0 +1,21 @@
+{
+    "/**": {
+      "target": "https://api.starlink.com/auth/connect/token",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "pathRewrite": {
+        "^/auth": ""
+      }
+    },
+    "/api": {
+      "target": "https://web-api.starlink.com",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
+  

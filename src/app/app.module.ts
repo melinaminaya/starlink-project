@@ -25,6 +25,13 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ModalComponent } from './shared/modal/modal.component';
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { SidenavComponent } from './shared/sidenav/sidenav.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CardDashboardComponent } from './shared/card-dashboard/card-dashboard.component';
+import {MatSelectModule} from '@angular/material/select';
+import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +45,10 @@ import { ModalComponent } from './shared/modal/modal.component';
     CardBuscaComponent,
     CardDepoimentoComponent,
     FormBuscaComponent,
-    ModalComponent
+    ModalComponent,
+    SidenavComponent,
+    CardDashboardComponent,
+    PromocoesComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +65,10 @@ import { ModalComponent } from './shared/modal/modal.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
+    MatSidenavModule,
+    MatListModule,
+    HttpClientModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
