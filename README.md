@@ -4,7 +4,7 @@
 
 O Autotrac-Starlink é um mvp para demonstração de resposta da API Starlink. 
 Este MVP em Angular é o embrião do portal de acesso às informações do projeto Starlink.
-![alt text](src/assets/imagens/proj_starlink_img.png)
+![Imagem do Dashboard em construção](src/assets/imagens/proj_starlink_home.png)
 # Api em Nest
 
 Esse é um protótipo da API pra permitir o desenvolvimento do frontend.
