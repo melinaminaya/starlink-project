@@ -76,11 +76,11 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "jornada-milhas:build:production"
+              "buildTarget": "jornada-milhas:build:production"
             },
             "development": {
-              "browserTarget": "jornada-milhas:build:development",
-              "proxyConfig": "proxy.conf.json"
+              "proxyConfig": "proxy.conf.json",
+              "buildTarget": "jornada-milhas:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "jornada-milhas:build"
+            "buildTarget": "jornada-milhas:build"
           }
         },
         "test": {
