@@ -7,7 +7,7 @@ import { AvailableProducts } from 'src/app/core/types/available-products';
 @Component({
   selector: 'app-card-dashboard',
   templateUrl: './card-dashboard.component.html',
-  styleUrls: ['./card-dashboard.component.scss']
+  styleUrls: ['./card-dashboard.component.scss'],
 })
 export class CardDashboardComponent implements OnInit {
   accounts: Account[] = [];

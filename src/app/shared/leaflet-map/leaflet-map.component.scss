@@ -1,0 +1,23 @@
+:host {
+  display: block; /* Ensure the component itself is block-level */
+  height: 100%; /* Full height of the container */
+  width: 100%;  /* Full width of the container */
+  position: relative; /* Ensure child elements are positioned relative to this */
+}
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // margin: 30px;
+}
+
+.map-frame {
+  // border: 2px solid black;
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}

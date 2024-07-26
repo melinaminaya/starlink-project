@@ -32,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardDashboardComponent } from './shared/card-dashboard/card-dashboard.component';
 import {MatSelectModule} from '@angular/material/select';
 import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
+import { LeafletMapComponent } from './shared/leaflet-map/leaflet-map.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
     SidenavComponent,
     CardDashboardComponent,
     PromocoesComponent,
+    LeafletMapComponent
   ],
   imports: [
     BrowserModule,
@@ -69,6 +71,7 @@ import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
     MatListModule,
     HttpClientModule,
     MatSelectModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

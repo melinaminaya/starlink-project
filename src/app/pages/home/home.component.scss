@@ -5,3 +5,8 @@
     row-gap: 16px;
     margin-bottom: 40px;
 }
+.leaflet-map-container {
+    height: 300px; /* Adjust height as needed */
+    width: 600px; /* Full width of the card */
+    border: 1px solid #ccc; /* Optional border */
+  }
