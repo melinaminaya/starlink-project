@@ -1,1 +1,18 @@
-<p>information-container works!</p>
+<div class="information-container">
+    <div class="card" *ngFor="let chart of charts">
+        <div class="card-header">{{ chart.title }}</div>
+        <div class="card-body">
+            <ngx-charts-bar-vertical
+            [view]="view"
+            [results]="chart.data"
+            [animations]="animations"
+            [legend]="legend"
+            [xAxis]="xAxis"
+            [yAxis]="yAxis"
+            [showYAxisLabel]="showYAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [dataLabelFormatting]="dataLabelFormatter">
+        </ngx-charts-bar-vertical>
+        </div>
+    </div>
+</div>

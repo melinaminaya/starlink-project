@@ -1,0 +1,49 @@
+.information-container{
+    display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #272727b0;
+  background-color: #27272769;
+
+  .card {
+    // background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 32px);
+    // max-width: calc(33.333% - 32px);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    box-sizing: border-box;
+
+    // @media (max-width: 1200px) {
+    //   flex: 1 1 calc(70% - 32px);
+    //   max-width: calc(70% - 32px);
+    // }
+
+    // @media (max-width: 768px) {
+    //   flex: 1 1 100%;
+    //   max-width: 100%;
+    // }
+
+    .card-header {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .card-body {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+//   ngx-charts-bar-vertical {
+//     width: 100%; /* Make sure the chart takes full width of the card */
+//     height: 100%; /* Make sure the chart takes full height of the card */
+//   }
+}

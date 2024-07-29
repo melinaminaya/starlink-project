@@ -33,6 +33,9 @@ import { CardDashboardComponent } from './shared/card-dashboard/card-dashboard.c
 import {MatSelectModule} from '@angular/material/select';
 import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
 import { LeafletMapComponent } from './shared/leaflet-map/leaflet-map.component';
+import { InformationContainerComponent } from './shared/information-container/information-container.component';
+import { NgxChartsModule } from "@swimlane/ngx-charts";
+
 
 @NgModule({
   declarations: [
@@ -50,7 +53,8 @@ import { LeafletMapComponent } from './shared/leaflet-map/leaflet-map.component'
     SidenavComponent,
     CardDashboardComponent,
     PromocoesComponent,
-    LeafletMapComponent
+    LeafletMapComponent,
+    InformationContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +75,7 @@ import { LeafletMapComponent } from './shared/leaflet-map/leaflet-map.component'
     MatListModule,
     HttpClientModule,
     MatSelectModule,
-
+    NgxChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
