@@ -35,6 +35,9 @@ import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
 import { LeafletMapComponent } from './shared/leaflet-map/leaflet-map.component';
 import { InformationContainerComponent } from './shared/information-container/information-container.component';
 import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { DropdownUfComponent } from "./shared/form-busca/dropdown-uf/dropdown-uf.component";
 
 
 @NgModule({
@@ -54,7 +57,8 @@ import { NgxChartsModule } from "@swimlane/ngx-charts";
     CardDashboardComponent,
     PromocoesComponent,
     LeafletMapComponent,
-    InformationContainerComponent
+    InformationContainerComponent,
+    DropdownUfComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +80,10 @@ import { NgxChartsModule } from "@swimlane/ngx-charts";
     HttpClientModule,
     MatSelectModule,
     NgxChartsModule,
-  ],
+    MatAutocompleteModule,
+    DropdownUfComponent,
+    ReactiveFormsModule,
+],
   providers: [],
   bootstrap: [AppComponent]
 })
