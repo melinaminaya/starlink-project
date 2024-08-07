@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'jornada-milhas';
+  showSidenav = false;
+
+  constructor() {}
+
+  // ngOnInit(): void {
+  //   this.authService.isLoggedIn$.subscribe(isLoggedIn => {
+  //     this.showSidenav = isLoggedIn;
+  //   });
+  // }
 }

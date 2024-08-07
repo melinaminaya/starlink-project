@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent {
+  constructor(private router: Router) {}
 
+  isLoginPage(): boolean {
+    return this.router.url === '/';
+  }
 }

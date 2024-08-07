@@ -20,25 +20,30 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent } from './shared/modal/modal.component';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardDashboardComponent } from './shared/card-dashboard/card-dashboard.component';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
 import { LeafletMapComponent } from './shared/leaflet-map/leaflet-map.component';
 import { InformationContainerComponent } from './shared/information-container/information-container.component';
 import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { LoginComponent } from './pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import { DropdownUfComponent } from "./shared/form-busca/dropdown-uf/dropdown-uf.component";
-
+import { FormBaseComponent } from './shared/form-base/form-base.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +63,10 @@ import { DropdownUfComponent } from "./shared/form-busca/dropdown-uf/dropdown-uf
     PromocoesComponent,
     LeafletMapComponent,
     InformationContainerComponent,
+    LoginComponent,
+    FormBaseComponent,
     DropdownUfComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -80,10 +88,12 @@ import { DropdownUfComponent } from "./shared/form-busca/dropdown-uf/dropdown-uf
     HttpClientModule,
     MatSelectModule,
     NgxChartsModule,
-    MatAutocompleteModule,
-    DropdownUfComponent,
     ReactiveFormsModule,
-],
+    MatRadioModule,
+    MatDividerModule,
+    MatCheckboxModule,
+MatAutocompleteModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { FormBuscaService } from 'src/app/core/services/form-busca.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-form-busca',
@@ -12,11 +13,10 @@ export class FormBuscaComponent {
     start: new FormControl(null, [Validators.required]),
     end: new FormControl(null, [Validators.required])
   });
-  constructor(
-    public formBuscaService: FormBuscaService
-  ) { }
-  buscar() {
-    console.log(this.formBuscaService.formBusca.value)
+  readonly dialog = inject(MatDialog);
+
+  openDialog() {
+    this.dialog.open(ModalComponent)
   }
 
 }

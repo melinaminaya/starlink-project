@@ -1,4 +1,4 @@
 export const environment = {
-    apiUrl: 'http://locahost:8080/promocoes',
+    apiUrl: 'http://locahost:8080/',
    
 };
