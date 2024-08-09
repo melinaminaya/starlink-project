@@ -9,11 +9,11 @@ import { FormValidations } from '../form-validations';
   templateUrl: './form-base.component.html',
   styleUrl: './form-base.component.scss'
 })
-export class FormBaseComponent implements OnInit{
+export class FormBaseComponent implements OnInit {
 
   cadastroForm!: FormGroup;
   estadoControl = new FormControl<UnidadeFederativa | null>(null, Validators.required);
-  @Input() perfilComponent!: boolean 
+  @Input() perfilComponent!: boolean
   @Output() clickCadastro: EventEmitter<any> = new EventEmitter<any>
 
   constructor(
@@ -32,13 +32,13 @@ export class FormBaseComponent implements OnInit{
       telefone: [null, Validators.required],
       estado: this.estadoControl,
       confirmarEmail: [null, [Validators.required, Validators.email, FormValidations.equalTo('email')]],
-      confirmarSenha: [null, [Validators.required, Validators.minLength(3), FormValidations.equalTo('senha') ]],
+      confirmarSenha: [null, [Validators.required, Validators.minLength(3), FormValidations.equalTo('senha')]],
       aceitarTermos: [null, [Validators.requiredTrue]]
     });
     this.formularioService.setCadastro(this.cadastroForm)
   }
 
   cadastrar() {
-this.clickCadastro.emit()
+    this.clickCadastro.emit()
   }
 }

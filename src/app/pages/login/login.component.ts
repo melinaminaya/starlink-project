@@ -11,11 +11,12 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) { }
+  constructor(
+    private formBuilder: FormBuilder, private authService: AuthService, private router: Router) { }
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
 
-      email: [null, Validators.required, Validators.email],
+      email: [null, [Validators.required, Validators.email]],
       senha: [null, Validators.required]
     })
   }
@@ -26,6 +27,8 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    console.log('Form Valid:', this.loginForm.valid);
+    console.log('Form Values:', this.loginForm.value);
     if (this.loginForm.valid) {
       const email = this.loginForm.value.email
       const senha = this.loginForm.value.senha
@@ -40,6 +43,8 @@ export class LoginComponent implements OnInit {
         }
 
       })
+    } else {
+      window.alert('Por favor, preencha todos os campos corretamente.');
     }
   }
 }
