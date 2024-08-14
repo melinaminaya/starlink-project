@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
         },
         error: (err) => {
           console.log('Erro no login', err)
+          window.alert('Erro no login: Dados não conferem.')
         }
 
       })

@@ -13,8 +13,13 @@ export class FormBaseComponent implements OnInit {
 
   cadastroForm!: FormGroup;
   estadoControl = new FormControl<UnidadeFederativa | null>(null, Validators.required);
+
   @Input() perfilComponent!: boolean
+  @Input() title!: string
+  @Input() btFormBase!: string
   @Output() clickCadastro: EventEmitter<any> = new EventEmitter<any>
+  @Output() logout: EventEmitter<any> = new EventEmitter<any>
+
 
   constructor(
     private formBuilder: FormBuilder,
@@ -35,10 +40,20 @@ export class FormBaseComponent implements OnInit {
       confirmarSenha: [null, [Validators.required, Validators.minLength(3), FormValidations.equalTo('senha')]],
       aceitarTermos: [null, [Validators.requiredTrue]]
     });
+    if (this.perfilComponent) {
+      this.cadastroForm.get('aceitarTermos')?.setValidators(null)
+    }else{
+      this.cadastroForm.get('aceitarTermos')?.setValidators([Validators.requiredTrue])
+
+    }
+    this.cadastroForm.get('aceitarTermos')?.updateValueAndValidity()
     this.formularioService.setCadastro(this.cadastroForm)
   }
 
   cadastrar() {
     this.clickCadastro.emit()
+  }
+  deslogar() {
+    this.logout.emit()
   }
 }

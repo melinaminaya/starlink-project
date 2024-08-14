@@ -10,6 +10,6 @@ export class SidenavComponent {
   constructor(private router: Router) {}
 
   isLoginPage(): boolean {
-    return this.router.url === '/';
+    return this.router.url === '/' || this.router.url ==='/cadastro';
   }
 }

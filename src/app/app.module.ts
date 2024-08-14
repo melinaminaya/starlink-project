@@ -44,6 +44,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
     LoginComponent,
     FormBaseComponent,
     DropdownUfComponent,
-    CadastroComponent
+    CadastroComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

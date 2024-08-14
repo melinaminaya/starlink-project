@@ -35,7 +35,8 @@
               "node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": [],
-            "allowedCommonJsDependencies": ["leaflet", "rfdc"]
+            "allowedCommonJsDependencies": ["leaflet", "rfdc"],
+            "poll": 1000
           },
           "configurations": {
             "production": {
