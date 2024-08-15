@@ -1,5 +1,7 @@
-<app-form-base [title]="title" [btFormBase]="text"
+<app-form-base 
+[title]="title + nome" 
+[btFormBase]="text"
 [perfilComponent]="perfilComponent" 
 (logout)="deslogar()"
-(acaoClique)="atualizar()"
+(clickCadastro)="atualizar()"
 ></app-form-base>
