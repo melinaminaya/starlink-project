@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TokenService } from './token.service';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../types/types';
 import * as JWT from 'jwt-decode';
 
@@ -11,6 +11,14 @@ import * as JWT from 'jwt-decode';
 export class UserService {
 
   private userSubject = new BehaviorSubject<User | null>(null)
+  getUser(): Observable<User | null> {
+    return this.userSubject.asObservable();
+  }
+
+  // Função para definir o usuário autenticado
+  setUser(user: User | null) {
+    this.userSubject.next(user);
+  }
 
   constructor(private tokenService: TokenService) {
 

@@ -28,7 +28,7 @@ import { ModalComponent } from './shared/modal/modal.component';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule, provideHttpClient, withInterceptors } from '@angular/common/http';
 import { CardDashboardComponent } from './shared/card-dashboard/card-dashboard.component';
 import { MatSelectModule } from '@angular/material/select';
 import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
@@ -45,6 +45,8 @@ import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { autenticacaoInterceptor } from './core/interceptor/autenticacao.interceptor';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -95,8 +97,11 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     MatDividerModule,
     MatCheckboxModule,
     MatAutocompleteModule,
+    RouterModule,
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(withInterceptors([autenticacaoInterceptor])),
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
