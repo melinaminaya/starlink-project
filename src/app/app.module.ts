@@ -47,6 +47,15 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { autenticacaoInterceptor } from './core/interceptor/autenticacao.interceptor';
 import { RouterModule } from '@angular/router';
+import { BuscaComponent } from './pages/busca/busca.component';
+import { PassagemComponent } from './shared/passagem/passagem.component';
+import { LabelComponent } from './shared/form-busca/filtros-complementares/label/label.component';
+import { SliderModule } from 'primeng/slider';
+import { ParadasComponent } from './shared/form-busca/filtros-complementares/paradas/paradas.component';
+import { PrecosComponent } from './shared/form-busca/filtros-complementares/precos/precos.component';
+import { CompanhiasComponent } from './shared/form-busca/filtros-complementares/companhias/companhias.component';
+import { MatSliderModule } from '@angular/material/slider';
+import { FiltrosComplementaresComponent } from './shared/form-busca/filtros-complementares/filtros-complementares.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +80,14 @@ import { RouterModule } from '@angular/router';
     DropdownUfComponent,
     CadastroComponent,
     PerfilComponent,
+    BuscaComponent,
+    PassagemComponent,
+    LabelComponent,
+    ParadasComponent,
+    PrecosComponent,
+    CompanhiasComponent,
+    FiltrosComplementaresComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -98,6 +115,9 @@ import { RouterModule } from '@angular/router';
     MatCheckboxModule,
     MatAutocompleteModule,
     RouterModule,
+    SliderModule,
+    MatSliderModule,
+    
   ],
   providers: [
     provideHttpClient(withInterceptors([autenticacaoInterceptor])),
